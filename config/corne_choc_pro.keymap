@@ -29,7 +29,7 @@
 
         cmdspace {
             bindings = <&kp LG(SPACE)>;
-            key-positions = <20 21>;
+            key-positions = <15 26>;
         };
     };
 
