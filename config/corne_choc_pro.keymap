@@ -26,11 +26,6 @@
             bindings = <&kp CAPS>;
             key-positions = <19 18>;
         };
-
-        cmdspace {
-            bindings = <&kp LG(SPACE)>;
-            key-positions = <15 26>;
-        };
     };
 
     keymap {
