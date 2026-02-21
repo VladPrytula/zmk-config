@@ -18,7 +18,7 @@
         compatible = "zmk,combos";
 
         cirdash {
-            bindings = <&kp MINUS>;
+            bindings = <&kp RC(MINUS)>;
             key-positions = <22 23>;
         };
 
