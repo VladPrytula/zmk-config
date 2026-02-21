@@ -19,12 +19,17 @@
 
         cirdash {
             bindings = <&kp RC(MINUS)>;
-            key-positions = <22 23 20>;
+            key-positions = <22 23>;
         };
 
         alphabetswitch {
             bindings = <&kp CAPS>;
             key-positions = <19 18>;
+        };
+
+        cmdspace {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <20 21>;
         };
     };
 
