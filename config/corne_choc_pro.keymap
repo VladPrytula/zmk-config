@@ -41,10 +41,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp C_MUTE  &kp C_PP  &kp Y      &kp U  &kp I             &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &lt 3 TAB   &kp RALT  &kp H      &kp J  &kp K             &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B                              &kp N      &kp M  &kp COMMA         &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &lt 3 ENTER                        &kp SPACE  &mo 2  &kp LEFT_CONTROL
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &kp C_MUTE  &kp C_PP  &kp Y      &kp U  &kp I             &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &lt 3 TAB   &kp RALT  &kp H      &kp J  &kp K             &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B                            &kp N      &kp M  &kp COMMA         &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 1  &kp ENTER                        &kp SPACE  &mo 2  &kp LEFT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -87,10 +87,10 @@
         extra_layer_1 {
             display-name = "EXTRA 1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LC(LG(N4)))    &trans  &trans  &trans                 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(LG(LA(LEFT)))  &trans  &trans  &kp LC(LG(LA(RIGHT)))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans                &trans  &trans  &trans                 &trans  &trans
-                        &trans  &trans  &trans                  &trans                &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LC(LG(N4)))  &kp LG(LEFT_ARROW)          &kp LG(RIGHT)          &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LA(LEFT_ARROW)  &trans                      &trans                 &kp LA(RIGHT)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans              &kp LC(LG(LA(LEFT_ARROW)))  &kp LA(LC(LG(RIGHT)))  &trans         &trans  &trans
+                        &trans  &trans  &trans                  &trans              &trans                      &trans
             >;
         };
 
@@ -142,6 +142,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans                  &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        activate_l3 {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
