@@ -86,10 +86,10 @@
         extra_layer_1 {
             display-name = "EXTRA 1";
             bindings = <
-&trans    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &trans  &trans      &trans  &kp LS(LC(LG(N4)))  &kp LG(LEFT_ARROW)          &kp LG(RIGHT)          &trans         &trans  &kp DELETE
-&kp CAPS  &bt BT_SEL 0    &trans        &trans          &trans        &trans  &sys_reset  &trans  &kp LA(LEFT_ARROW)  &trans                      &trans                 &kp LA(RIGHT)  &trans  &trans
-&trans    &bt BT_CLR_ALL  &trans        &studio_unlock  &bootloader   &trans                      &trans              &kp LC(LG(LA(LEFT_ARROW)))  &kp LA(LC(LG(RIGHT)))  &trans         &trans  &trans
-                                        &trans          &trans        &trans                      &trans              &trans                      &trans
+&trans    &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LS(LC(LG(N4)))  &kp LG(LEFT_ARROW)          &kp LG(RIGHT)          &trans         &trans  &kp DELETE
+&kp CAPS  &bt BT_SEL 0    &trans        &trans          &trans        &trans  &sys_reset         &trans           &kp LA(LEFT_ARROW)  &trans                      &trans                 &kp LA(RIGHT)  &trans  &trans
+&trans    &bt BT_CLR_ALL  &trans        &studio_unlock  &bootloader   &trans                                      &trans              &kp LC(LG(LA(LEFT_ARROW)))  &kp LA(LC(LG(RIGHT)))  &trans         &trans  &trans
+                                        &trans          &trans        &trans                                      &trans              &trans                      &trans
             >;
         };
 
